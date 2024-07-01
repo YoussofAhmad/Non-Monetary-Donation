@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate Now</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .pickup-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .pickup-heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pickup-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin-bottom: 20px;
+    }
+    .pickup-option {
+        text-align: center;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: border-color 0.3s ease;
+    }
+    .pickup-option:hover {
+        border-color: #007bff;
+    }
+    .pickup-option label {
+        display: block;
+        margin-top: 10px;
+    }
+    .time-radio {
+        display: none;
+    }
+    .time-label {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .time-label:hover {
+        background-color: #f0f0f0;
+    }
+    .time-radio:checked + .time-label {
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>
+<body>
+    <div class="header_section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand"><a href="index.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <!-- <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="Start1.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="donate.html">Donate</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="news.html">News</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="mission.html">Our Mission</a>
+                  </li>
+               </ul> -->
+               <form class="form-inline my-2 my-lg-0">
+                  <!-- <div class="search_icon"><a href="#"><img src="images/search-icon.png"></a></div>
+                  <li class="nav-item active">
+                  <a class="nav-link" href="Login1.html">Login as Admin</a> -->
+                  </li>
+               </form>
+            </div>
+         </nav>
+    </div>
+
+    <div class="donate_section layout_padding">
+        <div class="pickup-container">
+            <h1 class="pickup-heading">Donation Pickup</h1>
+            <div class="pickup-options">
+                <div class="pickup-option">
+                    <input type="radio" id="truck" name="transportation" value="truck">
+                    <label for="truck">Truck</label>
+                </div>
+                <div class="pickup-option">
+                    <input type="radio" id="car" name="transportation" value="car">
+                    <label for="car">Car</label>
+                </div>
+                <div class="pickup-option">
+                    <input type="radio" id="motorcycle" name="transportation" value="motorcycle">
+                    <label for="motorcycle">Motorcycle</label>
+                </div>
+            </div>
+            <div class="pickup-options">
+                <div class="pickup-option">
+                    <label>Pickup Time</label>
+                    <input type="radio" id="time-slot1" class="time-radio" name="pickup-time" value="09:00 AM">
+                    <label for="time-slot1" class="time-label">09:00 AM -11:00 AM</label>
+                    <input type="radio" id="time-slot2" class="time-radio" name="pickup-time" value="11:00 AM">
+                    <label for="time-slot2" class="time-label">11:00 AM -01:00 PM</label>
+                    <input type="radio" id="time-slot3" class="time-radio" name="pickup-time" value="01:00 PM">
+                    <label for="time-slot3" class="time-label">01:00 PM - 03:00 PM</label>
+                    <input type="radio" id="time-slot4" class="time-radio" name="pickup-time" value="03:00 PM">
+                    <label for="time-slot4" class="time-label">03:00 PM - 05:00 PM</label>
+                    <input type="radio" id="time-slot5" class="time-radio" name="pickup-time" value="05:00 PM">
+                    <label for="time-slot5" class="time-label">05:00 PM - 07:00 PM</label>
+                    <input type="radio" id="time-slot6" class="time-radio" name="pickup-time" value="07:00 PM">
+                    <label for="time-slot6" class="time-label">07:00 PM - 09:00 PM</label>
+                  
+                </div>
+            </div>
+            <div id="eta-section">
+                <h3>Estimated Time of Arrival (ETA): <span id="eta"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_section layout_padding">
+        <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <div class="footer_logo"><img src="images/footer-logo.png"></div>
+               </div>
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">NAVIGATION</h4>
+                  <div class="footer_menu_main">
+                     <div class="footer_menu_left">
+                        <div class="footer_menu">
+                           <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="donate.html">Donate</a></li>
+                              <li><a href="contact.html">Contact us</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="footer_menu_right">
+                        <div class="footer_menu">
+                           <ul>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="news.html">News</a></li>
+                              <li><a href="mission.html">Our Mission</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">NEWS</h4>
+                  <p class="footer_text">Generators on the Internet</p>
+                  <p class="footer_text">Tend to repeat predefined</p>
+                  <p class="footer_text">Chunks as necessary, making</p>
+               </div>
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">address</h4>
+                  <p class="footer_text">Ave NW, Washington</p>
+                  <p class="footer_text">+01 1234567890</p>
+                  <p class="footer_text">demo@gmail.com</p>
+               </div>
+            </div>
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-sm-4 col-md-4 col-lg-3">
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                           <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                           <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                           <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-sm-8 col-md-8 col-lg-9">
+                     <input type="text" class="address_text" placeholder="Enter your Enail" name="text">
+                     <button type="button" class="get_bt">SUBSCRIBE</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </div>
+
+    <script>
+        // Function to calculate random ETA based on selected pickup time
+        function calculateRandomETA() {
+            // Get the selected pickup time
+            const selectedTime = document.querySelector('input[name="pickup-time"]:checked').value;
+
+            // Generate random ETA
+            const randomMinutes = Math.floor(Math.random() * 60) + 1; // Random number between 1 and 60
+            const randomHours = Math.floor(Math.random() * 5) + 1; // Random number between 1 and 5
+            const eta = `within ${randomHours} hours and ${randomMinutes} minutes`;
+
+            // Display the random ETA
+            document.getElementById('eta').innerText = eta;
+        }
+
+        // Event listener to recalculate random ETA when pickup time changes
+        const timeRadios = document.querySelectorAll('.time-radio');
+        timeRadios.forEach(function(radio) {
+            radio.addEventListener('change', calculateRandomETA);
+        });
+
+        // Initial calculation when the page loads
+        calculateRandomETA();
+    </script>>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+    <!-- copyright section start -->
+    <div class="copyright_section">
+        <div class="container">
+           <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+        </div>
+     </div>
+     <!-- copyright section end -->
+     <!-- Javascript files-->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/jquery-3.0.0.min.js"></script>
+     <script src="js/plugin.js"></script>
+     <!-- sidebar -->
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="js/custom.js"></script>
+     <!-- javascript --> 
+     <script src="js/owl.carousel.js"></script>
+     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+</body>
+</html>

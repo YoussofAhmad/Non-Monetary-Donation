@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Donate Now</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+
+    .filter-section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 600px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .checkbox-group {
+        margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+    <!-- owl stylesheets --> 
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .wrapper {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .details h2 {
+            margin-top: 0;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .dropdown-selected {
+            padding: 12px 16px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .dropdown-selected:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+<!-- header section start -->
+<div class="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"><a href="index.html"><img src="images/logo.png"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+    </nav>
+</div>
+<!-- header section end -->
+<!-- donate section start -->
+
+<div class="filter-section">
+    <h2>Filter Registered Organizations</h2>
+    <form id="organization-filter-form">
+        <div class="form-group checkbox-group">
+            <label>Area:</label>
+            <div>
+                <input type="checkbox" id="urban" name="area" value="urban">
+                <label for="urban">Urban</label>
+            </div>
+            <div>
+                <input type="checkbox" id="rural" name="area" value="rural">
+                <label for="rural">Rural</label>
+            </div>
+        </div>
+        <div class="form-group checkbox-group">
+            <label>Governorate:</label>
+            <div>
+                <input type="checkbox" id="governorate1" name="governorate" value="governorate1">
+                <label for="governorate1">Governorate 1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="governorate2" name="governorate" value="governorate2">
+                <label for="governorate2">Governorate 2</label>
+            </div>
+            <!-- Add more checkboxes as needed -->
+        </div>
+        <div class="form-group checkbox-group">
+            <label>Organization Type:</label>
+            <div>
+                <input type="checkbox" id="type1" name="organization-type" value="type1">
+                <label for="type1">Type 1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="type2" name="organization-type" value="type2">
+                <label for="type2">Type 2</label>
+            </div>
+            <!-- Add more checkboxes as needed -->
+        </div>
+        <button type="submit">Apply Filters</button>
+    </form>
+</div>
+
+<!-- donate section end -->
+
+<!-- footer section start -->
+<div class="footer_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="footer_logo"><img src="images/footer-logo.png"></div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <h4 class="footer_taital">NAVIGATION</h4>
+                <div class="footer_menu_main">
+                    <div class="footer_menu_left">
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="donate.html">Donate</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_menu_right">
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="mission.html">Our Mission</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <h4 class="footer_taital">NEWS</h4>
+                <p class="footer_text">Generators on the Internet</p>
+                <p class="footer_text">Tend to repeat predefined</p>
+                <p class="footer_text">Chunks as necessary, making</p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <h4 class="footer_taital">address</h4>
+                <p class="footer_text">Ave NW, Washington</p>
+                <p class="footer_text">+01 1234567890</p>
+                <p class="footer_text">demo@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer_section_2">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-3">
+                    <div class="social_icon">
+                        <ul>
+                            <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                            <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                            <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                            <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-9">
+                    <input type="text" class="address_text" placeholder="Enter your Email" name="text">
+                    <button type="button" class="get_bt">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer section end -->
+<!-- copyright section start -->
+<div class="copyright_section">
+    <div class="container">
+        <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+    </div>
+</div>
+<!-- copyright section end -->
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/plugin.js"></script>
+<!-- sidebar -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/custom.js"></script>
+<!-- javascript -->
+<script src="js/owl.carousel.js"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+</html>
+=======
+<div class="donate_section layout_padding">
+    <div class="form-container">
+        <h1 class="form-title" style="color: white;">Filter Registered organizations</h1>
+        <form class="form" action="#" method="GET">
+            <div class="dropdown" onclick="toggleDropdown('age')">
+                <div class="dropdown-selected" id="selectedAge">area</div>
+                <div class="dropdown-content" id="ageOptions">
+                    <a href="#" onclick="selectOption('X', 'age')">X</a>
+                    <a href="#" onclick="selectOption('Y', 'age')">Y</a>
+                    <a href="#" onclick="selectOption('Z', 'age')">Z</a>
+                    <a href="#" onclick="selectOption('M', 'age')">M</a>
+                </div>
+            </div>
+
+            <div class="dropdown" onclick="toggleDropdown('gender')">
+                <div class="dropdown-selected" id="selectedGender">governorate </div>
+                <div class="dropdown-content" id="genderOptions">
+                    <a href="#" onclick="selectOption('governorate 1', 'gender')">governorate 1</a>
+                    <a href="#" onclick="selectOption('governorate 2', 'gender')">governorate 2</a>
+                    <a href="#" onclick="selectOption('governorate 3', 'gender')">governorate 3</a>
+                </div>
+            </div>
+
+            <div class="dropdown" onclick="toggleDropdown('season')">
+                <div class="dropdown-selected" id="selectedSeason">Organization type</div>
+                <div class="dropdown-content" id="seasonOptions">
+                    <a href="#" onclick="selectOption('teaching', 'season')">teaching</a>
+                    <a href="#" onclick="selectOption('medication', 'season')">medication</a>
+                    <a href="#" onclick="selectOption('food', 'season')">food</a>
+                    <a href="#" onclick="selectOption('clothes', 'season')">clothes</a>
+                </div>
+            </div>
+
+            <input class="form-submit" type="button" value="Filter" onclick="filterData()">
+        </form>
+    </div>
+
+    <div class="wrapper" id="donationItems">
+        <div class="item">
+            <div class="details">
+                <h2>T-Shirt</h2>
+                <p><strong>area:</strong>X</p>
+                <p><strong>governorate:</strong>governorate 1</p>
+                <p><strong>Organization type:</strong>clothes</p>
+                <p><strong>Material:</strong>Cotton</p>
+                <p><strong>Quantity Requested:</strong> 100</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="details">
+                <h2>Chicken</h2>
+                <p><strong>area:</strong>Y</p>
+                <p><strong>governorate:</strong>governorate 3</p>
+                <p><strong>Organization type:</strong>food</p>
+                <p><strong>Material:</strong>Wool</p>
+                <p><strong>Quantity Requested:</strong>50</p>
+            </div>
+        </div>
+        <!-- Add more dummy data here -->
+    </div>
+</div>
+<!-- donate section end -->
+<!-- footer section start -->
+<div class="footer_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-3">
+             <div class="footer_logo"><img src="images/footer-logo.png"></div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+             <h4 class="footer_taital">NAVIGATION</h4>
+             <div class="footer_menu_main">
+                <div class="footer_menu_left">
+                   <div class="footer_menu">
+                      <ul>
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="donate.html">Donate</a></li>
+                         <li><a href="contact.html">Contact us</a></li>
+                      </ul>
+                   </div>
+                </div>
+                <div class="footer_menu_right">
+                   <div class="footer_menu">
+                      <ul>
+                         <li><a href="about.html">About</a></li>
+                         <li><a href="news.html">News</a></li>
+                         <li><a href="mission.html">Our Mission</a></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+             <h4 class="footer_taital">NEWS</h4>
+             <p class="footer_text">Generators on the Internet</p>
+             <p class="footer_text">Tend to repeat predefined</p>
+             <p class="footer_text">Chunks as necessary, making</p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+             <h4 class="footer_taital">address</h4>
+             <p class="footer_text">Ave NW, Washington</p>
+             <p class="footer_text">+01 1234567890</p>
+             <p class="footer_text">demo@gmail.com</p>
+          </div>
+       </div>
+       <div class="footer_section_2">
+          <div class="row">
+             <div class="col-sm-4 col-md-4 col-lg-3">
+                <div class="social_icon">
+                   <ul>
+                      <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                      <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                      <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                      <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                   </ul>
+                </div>
+             </div>
+             <div class="col-sm-8 col-md-8 col-lg-9">
+                <input type="text" class="address_text" placeholder="Enter your Enail" name="text">
+                <button type="button" class="get_bt">SUBSCRIBE</button>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- footer section end -->
+ <!-- copyright section start -->
+ <div class="copyright_section">
+    <div class="container">
+       <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+    </div>
+ </div>
+ <!-- copyright section end -->
+ <!-- Javascript files-->
+ <script src="js/jquery.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/jquery-3.0.0.min.js"></script>
+ <script src="js/plugin.js"></script>
+ <!-- sidebar -->
+ <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script src="js/custom.js"></script>
+ <!-- javascript --> 
+ <script src="js/owl.carousel.js"></script>
+ <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+
+<!-- footer section end -->
+<!-- footer section end -->
+</body>
+<script>
+    function toggleDropdown(dropdown) {
+        var dropdownContent = document.getElementById(dropdown + 'Options');
+        dropdownContent.classList.toggle('show');
+    }
+
+    function selectOption(option, dropdown) {
+        document.getElementById('selected' + dropdown.charAt(0).toUpperCase() + dropdown.slice(1)).innerText = option;
+        hideDropdown(dropdown);
+    }
+
+    function hideDropdown(dropdown) {
+        var dropdownContent = document.getElementById(dropdown + 'Options');
+        dropdownContent.classList.remove('show');
+    }
+
+    function filterData() {
+        var selectedAge = document.getElementById('selectedAge').innerText.toLowerCase();
+        var selectedGender = document.getElementById('selectedGender').innerText.toLowerCase();
+        var selectedSeason = document.getElementById('selectedSeason').innerText.toLowerCase();
+        var items = document.getElementsByClassName('item');
+
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            var ageGroup = item.querySelector('p:nth-child(2)').innerText.toLowerCase();
+            var gender = item.querySelector('p:nth-child(3)').innerText.toLowerCase();
+            var season = item.querySelector('p:nth-child(4)').innerText.toLowerCase();
+
+            if (selectedAge === 'select age group' || ageGroup.includes(selectedAge)) {
+                if (selectedGender === 'select gender' || gender.includes(selectedGender)) {
+                    if (selectedSeason === 'select season' || season.includes(selectedSeason)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-selected')) {
+            hideDropdown();
+        }
+    }
+    function hideDropdown() {
+        var dropdownContent = document.getElementById('dropdownOptions');
+        dropdownContent.classList.remove('show');
+    }
+</script>
+</html>
+>>>>>>> 909e5458e2d07056dbe5d7d915ccfb7c76861b83
