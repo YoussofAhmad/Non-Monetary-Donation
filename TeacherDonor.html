@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #110482; /* Set header background color */
+            color: #fff; /* Set header text color */
+            padding: 20px 10px; /* Adjust padding to increase height */
+            text-align: center;
+            position: relative; /* Position relative to contain the logout button */
+        }
+        .logout-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #555;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dashboard-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #110482;
+            padding-top: 50px;
+            color: #fff;
+            transition: all 0.3s ease;
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: calc(100% - 50px); /* Set maximum height (viewport height minus header height) */
+        }
+        .dashboard-menu.hide {
+            left: -250px;
+        }
+        .dashboard-menu h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dashboard-menu a {
+            text-decoration: none;
+            color: #fff; /* Change text color to white */
+            font-size: 18px;
+            display: block;
+        }
+        .dashboard-menu li {
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #0c09d727;
+        }
+        .dashboard-menu li:last-child {
+            border-bottom: none;
+        }
+        .dashboard-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            display: block;
+        }
+        .dashboard-menu a:hover {
+            background-color: #555;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #fafafa;
+            cursor: pointer;
+            z-index: 999;
+        }
+        .info-window {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 60px; /* Increased padding for more space inside the window */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px; /* Increased width */
+            max-width: 80%; /* Set maximum width to maintain responsiveness */
+            height: auto; /* Let the height adjust based on content */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Donor
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+    <div class="dashboard-menu hide" id="dashboardMenu">
+    <h2>Dashboard</h2>
+    <ul>
+    
+        <li><a href="DonorDocumentUpload.html">Document Upload for Donor Verification</a></li>
+        <li><a href="ClinicLocationSpecification.html">Clinic Location Specification</a></li>       
+        <li><a href="ViewRequestedDonationItems.html">View Requested Donation Items</a></li>
+        <li><a href="SearchDonationItemsByCategory.html">Search Donation Items by Category</a></li>
+        <!-- <li><a href="#">Category Selection for Donation(NOTTT)</a></li> -->
+        <li><a href="filterAndViewClothes.html">Filter and View Clothes Donation Requests</a></li>
+        <li><a href="FilterSchoolSuplies.html">Filter and View School supplies Requests</a></li>
+        <!-- 16 -->
+        <li><a href="SubjectClassSelectionTeaching.html">Subject and Class Selection for Teaching</a></li>
+        <li><a href="ViewDetStationaryItems.html">View Details of Stationary Items</a></li>
+        <li><a href="QuantitySelectionStationaryItems.html">Quantity Selection for Stationary Donations</a></li>
+        <li><a href="ViewDetailsBookReq.html">View Details of Book Requests</a></li>
+        <li><a href="ViewListToyDonationReq.html">View List of Toy Donation Requests</a></li>
+        <li><a href="FilterToyDonationRequests.html">Filter Toy Donation Requests</a></li>
+        <li><a href="ViewDetailsofToyItems.html">View Details of Toy Items</a></li>
+        <li><a href="QuantitySelectionforToyDonations.html">Quantity Selection for Toy Donations</a></li>
+        <li><a href="ViewListofFoodDonationRequests.html">View List of Food Donation Requests</a></li>
+        <li><a href="FilterFoodDonationRequests.html">Filter Food Donation Requests</a></li>
+        <li><a href="ViewDetailsFood.html">View Details of Food Items</a></li>
+        <li><a href="QuantitySelectionFood.html">Quantity Selection for Food Donations</a></li>
+        <li><a href="ViewListOfMedicalSupplies.html">View List of Medical Supplies Donation Requests</a></li>
+        <li><a href="FilterMedicalSupplies.html">Filter Medical Supplies Donation Requests</a></li> 
+        <li><a href="FilterMedicationRequest.html">Filter Medication Requests</a></li>
+        <li><a href="ViewDetailsMedicalSupplies.html">View Details of Medical Supplies</a></li>
+        <!-- from 43-45 -->
+        <li><a href="ViewDetailsBloodDonations.html">View Details of Blood Donations</a></li> 
+      
+        <!-- 47-50 Mario now -->
+        
+        <li><a href="ViewandFilterTeachingPosts.html">View & Filter Teaching Posts</a></li>
+        <li><a href="viewDetailsofTeachingPosts.html">View Details of Teaching Posts</a></li>
+
+        <li><a href="TransportationSelection.html">Transportation Selection and schedule pickup</a></li>
+        <li><a href="ReceiveNotificationForDriverArrival.html">Receive Notification for Driver Arrival</a></li>
+        <li><a href="ViewRegisteredOrganizations.html">View Registered Organizations</a></li>
+        <li><a href="ViewOrganizationDetails.html">View Organization Details</a></li>
+        <li><a href="ChangePassword.html">Change Password</a></li>
+    </ul>
+    </div>
+
+    <div class="toggle-btn" onclick="toggleDashboardMenu()">
+        &#9776;
+    </div>
+
+    <div class="info-window">
+        <h2>User Information</h2>
+        <p>Role: Donor</p>
+        <p>Name: Mario Fady</p>
+        <p>User ID: 89785</p>
+        <p>Status: Active</p>
+        <p>Username: mariofady789</p>
+    </div>
+
+    <script>
+        function toggleDashboardMenu() {
+            var dashboardMenu = document.getElementById('dashboardMenu');
+            dashboardMenu.classList.toggle('hide');
+        }
+
+        function logout() {
+            window.location.href = "index.html"; // Redirect to mario.html
+        }
+    </script>
+
+</body>
+</html>

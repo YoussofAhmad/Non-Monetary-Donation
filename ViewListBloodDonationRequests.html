@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Donate Now</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+
+
+
+   <!-- adjust the style here -->
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    #container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+        color: #333;
+    }
+    .donation-request {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    select {
+        margin-bottom: 10px; /* Add margin between select elements */
+    }
+    .line-spacing {
+            margin-bottom: 20px;
+        }
+</style>
+
+
+
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand"><a href="index.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <!-- <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="Start1.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="donate.html">Donate</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="news.html">News</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="mission.html">Our Mission</a>
+                  </li>
+               </ul> -->
+               <form class="form-inline my-2 my-lg-0">
+                  <!-- <div class="search_icon"><a href="#"><img src="images/search-icon.png"></a></div>
+                  <li class="nav-item active">
+                  <a class="nav-link" href="Login1.html">Login as Admin</a> -->
+                  </li>
+               </form>
+            </div>
+         </nav>
+      </div>
+      <!-- header section end -->
+      <!-- donate section start -->
+      <div class="donate_section layout_padding">
+
+
+
+<!--////////////////////////////////////////// -->
+
+<!--////////////////////////////////////////// -->
+      
+            <!-- Write your method here -->
+            <body>
+                <div id="container">
+                    <h1>Blood Donation Requests</h1>
+                    
+                    <!-- Filter Controls -->
+                    <div class="line-spacing"></div>
+                    <!-- <label for="governorate">Hospitals:</label> -->
+                    <select id="hospital">
+                        <div class="line-spacing"></div>
+                        <option value="">All Hospitals:</option>
+                        <div class="line-spacing"></div>
+                        <optgroup label="Hospitals">
+                            <option value="Hospital Name 1">Hospital Name 1</option>
+                            <option value="Hospital Name 2">Hospital Name 2</option>
+                            <option value="Hospital Name 3">Hospital Name 3</option>
+                        </optgroup>
+                    </select>
+                     
+                    <div class="line-spacing"></div>
+                    <!-- <label for="governorate">Governorate:</label> -->
+                    <select id="governorate">
+                        <option value="">All Governorates:</option>
+                        <optgroup label="Governorates">
+                            <option value="Governorate 1">Governorate 1</option>
+                            <option value="Governorate 2">Governorate 2</option>
+                            <option value="Governorate 3">Governorate 3</option>
+                        </optgroup>
+                    </select>
+                     
+                    <div class="line-spacing"></div>
+                    <!-- <label for="area">Area:</label> -->
+                    <select id="area">
+                        <option value="">All Areas:</option>
+                        <optgroup label="Areas">
+                            <option value="Area 1">Area 1</option>
+                            <option value="Area 2">Area 2</option>
+                            <option value="Area 3">Area 3</option>
+                        </optgroup>
+                    </select>
+                    <button onclick="filterRequests()">Filter</button>
+                    <button onclick="resetFilters()">Reset</button>
+                    
+                    <!-- Donation Requests -->
+                    <div id="donationRequests">
+                        <!-- Donation Request 1 -->
+                        <div class="donation-request" data-hospital="Hospital Name 1" data-governorate="Governorate 1" data-area="Area 1">
+                            <h2>Hospital Name 1</h2>
+                            <p>Location: Governorate 1, Area 1</p>
+                            <p>Blood Type Required: O+</p>
+                            <p>Quantity Required: 5 units</p>
+                            <p>Contact Person: John Doe</p>
+                            <p>Contact Email: john.doe@example.com</p>
+                        </div>
+                        
+                        <!-- Donation Request 2 -->
+                        <div class="donation-request" data-hospital="Hospital Name 2" data-governorate="Governorate 2" data-area="Area 2">
+                            <h2>Hospital Name 2</h2>
+                            <p>Location: Governorate 2, Area 2</p>
+                            <p>Blood Type Required: A-</p>
+                            <p>Quantity Required: 3 units</p>
+                            <p>Contact Person: Jane Smith</p>
+                            <p>Contact Email: jane.smith@example.com</p>
+                        </div>
+                        
+                        <!-- Donation Request 3 -->
+                        <div class="donation-request" data-hospital="Hospital Name 3" data-governorate="Governorate 3" data-area="Area 3">
+                            <h2>Hospital Name 3</h2>
+                            <p>Location: Governorate 3, Area 3</p>
+                            <p>Blood Type Required: AB+</p>
+                            <p>Quantity Required: 7 units</p>
+                            <p>Contact Person: Alex Johnson</p>
+                            <p>Contact Email: alex.johnson@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    function filterRequests() {
+                        var hospital = document.getElementById("hospital").value;
+                        var governorate = document.getElementById("governorate").value;
+                        var area = document.getElementById("area").value;
+            
+                        var donationRequests = document.getElementsByClassName("donation-request");
+            
+                        for (var i = 0; i < donationRequests.length; i++) {
+                            var request = donationRequests[i];
+                            var requestHospital = request.getAttribute("data-hospital");
+                            var requestGovernorate = request.getAttribute("data-governorate");
+                            var requestArea = request.getAttribute("data-area");
+            
+                            if ((hospital === "" || requestHospital === hospital) &&
+                                (governorate === "" || requestGovernorate === governorate) &&
+                                (area === "" || requestArea === area)) {
+                                request.style.display = "block";
+                            } else {
+                                request.style.display = "none";
+                            }
+                        }
+                    }
+            
+                    function resetFilters() {
+                        document.getElementById("hospital").value = "";
+                        document.getElementById("governorate").value = "";
+                        document.getElementById("area").value = "";
+            
+                        var donationRequests = document.getElementsByClassName("donation-request");
+                        for (var i = 0; i < donationRequests.length; i++) {
+                            donationRequests[i].style.display = "block";
+                        }
+                    }
+                </script>
+            </body>
+<!--////////////////////////////////////////// -->
+
+<!--////////////////////////////////////////// -->
+
+  
+      <!-- donate section end -->
+      
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <div class="footer_logo"><img src="images/footer-logo.png"></div>
+               </div>
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">NAVIGATION</h4>
+                  <div class="footer_menu_main">
+                     <div class="footer_menu_left">
+                        <div class="footer_menu">
+                           <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="donate.html">Donate</a></li>
+                              <li><a href="contact.html">Contact us</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="footer_menu_right">
+                        <div class="footer_menu">
+                           <ul>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="news.html">News</a></li>
+                              <li><a href="mission.html">Our Mission</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">NEWS</h4>
+                  <p class="footer_text">Generators on the Internet</p>
+                  <p class="footer_text">Tend to repeat predefined</p>
+                  <p class="footer_text">Chunks as necessary, making</p>
+               </div>
+               <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h4 class="footer_taital">address</h4>
+                  <p class="footer_text">Ave NW, Washington</p>
+                  <p class="footer_text">+01 1234567890</p>
+                  <p class="footer_text">demo@gmail.com</p>
+               </div>
+            </div>
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-sm-4 col-md-4 col-lg-3">
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                           <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                           <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                           <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-sm-8 col-md-8 col-lg-9">
+                     <input type="text" class="address_text" placeholder="Enter your Enail" name="text">
+                     <button type="button" class="get_bt">SUBSCRIBE</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+   </body>
+</html>
+
